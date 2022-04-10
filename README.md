@@ -1,3 +1,5 @@
+## Can be tested at: https://dev.d22h4gsi7qcb2m.amplifyapp.com (May take a while for items to load, because of Heroku starting the back-end)
+
 # Made using:
 - React
 - JavaScript
@@ -8,9 +10,7 @@
 - GraphQL
 - BabelPlugins / FontAwesome
 
-
-
-
+### Backend can be found at: https://github.com/andrerrh/ecommerce-backend
 
 # Getting Started with Create React App
 
