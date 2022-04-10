@@ -1,0 +1,92 @@
+.product-management {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    top: 10vh;
+    width: 100vw;
+    height: auto;
+    overflow: auto;
+
+    $table-border: 2px solid grey;
+
+    table {
+        text-align: center;
+        overflow: auto;
+    }
+
+    tr {
+        border-bottom: $table-border;
+        height: 30px;
+    }
+
+    th,
+    td {
+        border-bottom: $table-border;
+        padding-left: 30px;
+    }
+
+    details p {
+        color: grey;
+    }
+
+    .images > * {
+        text-decoration: none;
+        color: lightskyblue;
+        padding-right: 10px;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    * {
+        border-collapse: collapse;
+    }
+
+    button {
+        border: none;
+        border-radius: 3px;
+        color: white;
+        width: 25px;
+        height: 25px;
+        margin-right: 5px;
+        padding: 0;
+
+        &:hover {
+            cursor: pointer;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+    }
+
+    .edit {
+        background-color: rgb(128, 0, 128);
+    }
+
+    .trash {
+        background-color: rgb(199, 0, 0);
+    }
+
+    .add {
+        margin-top: 20px;
+        :first-child {
+            padding: 5px 20px;
+            height: auto;
+            width: auto;
+        }
+    }
+}
+
+@media all and (max-width: 900px) {
+    .product-management {
+        table {
+            margin: auto;
+        }
+
+        .images > * {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}

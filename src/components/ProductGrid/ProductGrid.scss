@@ -1,0 +1,30 @@
+.product-grid {
+    padding: 5vh 0 0 5vw;
+    position: relative;
+    left: 20vw;
+    width: 75%;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 20px 50px;
+    z-index: 1;
+    margin: 0;
+    min-height: 70vh
+}
+
+@media all and (max-width: 1000px) {
+    .product-grid {
+        flex-direction: column;
+        gap: 0;
+        padding: 0;
+        width: 80%;
+        min-height: 75vh
+    }
+}
+
+@media all and (max-width: 850px) {
+    .product-grid {
+        left: 0;
+        width: 100%;
+    }
+}

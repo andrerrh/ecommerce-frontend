@@ -1,0 +1,76 @@
+$main-blue: #3e70cc;
+
+footer {
+    position: relative;
+    width: 100vw;
+    height: 5vh;
+    background-color: #0093e9;
+    background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+    margin-top: 15vh;
+    top: 100%;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: flex-start;
+    padding: 0vw 10vw 0vw 10vw;
+    box-shadow: 0 0 8px black;
+
+    * {
+        color: white;
+        overflow: hidden;
+        margin-left: 10px;
+    }
+
+    span {
+        flex-basis: 0;
+        flex-grow: 1;
+    }
+
+    a {
+        display: flex;
+        justify-content: center;
+    }
+
+    .react-logo {
+        font-size: 2rem;
+    }
+
+    .spacer {
+        opacity: 0;
+    }
+}
+
+.made-by-container,
+.git-logo-container,
+.git-info-container {
+    transition: 0.2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.git-logo-container:hover {
+    filter: drop-shadow(0 0 5px #fff);
+}
+
+.git-logo {
+    font-size: 1.5rem;
+}
+
+.react-logo-footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media all and (max-width: 850px) {
+    footer {
+        position: absolute;
+        span {
+            flex-basis: auto;
+        }
+        .github-text,
+        .react-logo-footer-container {
+            display: none;
+        }
+    }
+}

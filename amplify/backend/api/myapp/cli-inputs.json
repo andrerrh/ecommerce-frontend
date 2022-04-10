@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "serviceConfiguration": {
+    "apiName": "myapp",
+    "serviceName": "AppSync",
+    "gqlSchemaPath": "C:\\Users\\Andre8400\\Desktop\\code\\projects\\ecommerce\\my-app\\amplify\\backend\\api\\myapp\\schema.graphql",
+    "defaultAuthType": {
+      "mode": "API_KEY",
+      "expirationTime": 365,
+      "apiKeyExpirationDate": "2023-03-17T21:14:20.833Z",
+      "keyDescription": "gqls3api"
+    }
+  }
+}

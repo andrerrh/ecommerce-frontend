@@ -1,0 +1,25 @@
+.default-btn {
+    color: white;
+    background-color: #0093e9;
+    font-size: 1.3rem;
+    background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+    border: none;
+    min-width: fit-content;
+    min-height: fit-content;
+    width: auto;
+    height: auto;
+    transition: 0.5s;
+    padding: 5px 5px;
+    font-weight: bold;
+    border-radius: 10px;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.red-btn {
+    background: #ED213A;
+    background: -webkit-linear-gradient(to right, #93291E, #ED213A);  
+    background: linear-gradient(to right, #93291E, #ED213A); 
+}

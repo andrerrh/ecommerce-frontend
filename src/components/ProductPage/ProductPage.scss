@@ -1,0 +1,20 @@
+.product-page {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 10vw 0 10vw;
+
+    & > *:not(.product-description) {
+        flex-basis: 50%;
+    }
+}
+
+@media all and (max-width: 1240px) {
+    .product-page {
+        flex-direction: column;
+        padding: 0 1vw 0 1vw;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+    }
+}
+

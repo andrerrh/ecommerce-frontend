@@ -1,0 +1,16 @@
+.rating-container {
+    position: relative;
+    color: rgb(226, 226, 10);
+
+    .rating-star {
+        filter: drop-shadow(0 0 1px yellow);
+    }
+}
+
+.rating-value {
+    display: inline;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-left: 5px;
+    color: black;
+}

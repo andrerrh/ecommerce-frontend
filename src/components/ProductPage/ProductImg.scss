@@ -1,0 +1,44 @@
+.product-images-container {
+    position: relative;
+    top: 5vh;
+    display: flex;
+}
+
+.display-images-container {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 8px black;
+    
+    img {
+        cursor: pointer;
+        width: 12vh;
+        height: 12vh;
+        background-color: white;
+        opacity: 0.7;
+        object-fit: contain;
+        
+        &:hover {
+            opacity: 1;
+        }
+    }
+    
+    .active {
+        opacity: 1;
+    }
+    
+}
+
+.current-image {
+    width: calc(12vh * 5);
+    height: calc(12vh * 5);
+    object-fit: contain;
+    background-color: white;
+    box-shadow: 0 0 10px black;
+}
+
+@media all and (max-width: 1240px) {
+    .product-images-container {
+        justify-content: center;
+        
+    }
+}

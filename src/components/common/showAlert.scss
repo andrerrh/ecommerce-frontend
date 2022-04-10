@@ -1,0 +1,19 @@
+.alerts {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    min-width: 200px;
+    width: auto;
+    height: 50px;
+    background-color: rgb(37, 37, 37);
+    border-radius: 10px;
+    transform: translateX(-50%) translateY(-100%);
+    z-index: 1;
+    transition: 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid greenyellow;
+    visibility: hidden;
+    opacity: 0;
+}

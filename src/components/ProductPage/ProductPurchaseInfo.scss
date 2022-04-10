@@ -1,0 +1,79 @@
+
+
+.product-purchase-container {
+    position: relative;
+    top: 5vh;
+}
+
+.product-purchase-info {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    float: right;
+    padding-left: 2%;
+    width: 20vw;
+    height: auto;
+    min-height: 40vh;
+    box-shadow: 0 0 5px black;
+    font-family: "Lato";
+
+    .product-info-name {
+        overflow-wrap: break-word;
+        font-size: 2rem;
+    }
+
+    .price-installment {
+        color: grey;
+    }
+
+    .full-price {
+        font-weight: bold;
+        font-size: 1.5rem;
+
+        b {
+            color: rgb(48, 81, 228);
+        }
+    }
+
+    .buy-btn {
+        align-self: center;
+        width: auto;
+        height: auto;
+    }
+}
+
+@media all and (max-width: 1240px) {
+    .product-purchase-container {
+        justify-content: center;
+    }
+    .product-purchase-info {
+        float: none;
+        padding-top: 20px;
+        flex-direction: row;
+        width: 100%;
+        .buy-btn {
+            align-self: flex-start;
+            height: 50px;
+            & > button {
+                height: auto;
+            }
+        }
+    }
+}
+
+@media all and (max-width: 950px) {
+    .product-purchase-info {
+        flex-wrap: wrap;
+        & > * {
+            flex-basis: 100%;
+        }
+        .buy-btn {
+            & > button {
+                padding: 10px 10px;
+                width: auto;
+            }
+        }
+    }
+}
