@@ -1,3 +1,17 @@
+# Made using:
+- React
+- JavaScript
+- ApolloClient
+- AWS Amplify
+- react-router-dom
+- SCSS
+- GraphQL
+- BabelPlugins / FontAwesome
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
