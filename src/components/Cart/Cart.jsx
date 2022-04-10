@@ -105,7 +105,7 @@ export default function Cart() {
                 id_product: cart.product.id,
                 product_name: cart.product.name,
                 purchase_date: dateString,
-                quantity: quantity[cart.product.id] || 1,
+                quantity: parseInt(quantity[cart.product.id]) || 1,
                 price_payed: cart.product.price,
                 image: cart.product.image1
             }}).then(res => {

@@ -15,6 +15,12 @@
       "auth": {
         "myapp8b76f1b1": {},
         "true": {}
+      },
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "d22h4gsi7qcb2m",
+          "type": "manual"
+        }
       }
     }
   }

@@ -67,6 +67,11 @@
     .purchases-page-container {
         * {font-size: 1rem !important}
         .product {
+            .product-image {
+                flex-basis: auto;
+                width: 150px;
+                height: 150px;
+            }
             .product-purchase-info-container {
                 align-content: center;
                 & > p {

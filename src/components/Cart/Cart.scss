@@ -118,3 +118,15 @@
         }
     }
 }
+
+@media all and (max-width: 650px) {
+    .cart-page-container {
+        .confirmations {
+            flex-direction: column;
+            &>button {
+                width: 300px;
+                margin-top: 5px;
+            }
+        }
+    }
+}

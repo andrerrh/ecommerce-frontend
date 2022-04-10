@@ -40,7 +40,7 @@ export default function Purchases() {
                                     <p className="product-purchase-name">{purchase.product_name}</p>
                                     <p className="product-purchase-quantity">Quantidade: {purchase.quantity}</p>
                                     <p className="product-purchase-date">Comprado em: {purchase.purchase_date}</p>
-                                    <p className="product-purchase-price_payed">Preço pago: R${purchase.price_payed.toFixed(2)}</p>
+                                    <p className="product-purchase-price_payed">Preço pago: R${(purchase.price_payed * purchase.quantity).toFixed(2)}</p>
                                 </div>
                             </div>
                         })
