@@ -1,4 +1,4 @@
-## Can be tested at: https://dev.d22h4gsi7qcb2m.amplifyapp.com (May take a while for items to load, because of Heroku starting the back-end)
+## Can be tested at: [E-commerce Website]https://dev.d22h4gsi7qcb2m.amplifyapp.com (May take a while for items to load, because of Heroku starting the back-end)
 
 # Made using:
 - React
