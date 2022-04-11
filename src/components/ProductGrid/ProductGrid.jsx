@@ -6,6 +6,7 @@ import awsconfig from "../../aws-exports"
 import "./ProductGrid.scss"
 import ProductCard from "../ProductCard/ProductCard";
 import { gql, useQuery } from "@apollo/client"
+import Loading from '../common/Loading'
 
 Amplify.configure(awsconfig)
 
@@ -51,27 +52,30 @@ function ProductGrid({ ratingFilter, brandsFilter, priceOrder, categoriesFilter 
     }, [loading, data, error, priceOrder])
 
     return (
-        <div className="product-grid">
-            {
-                products?.filter((p) => {
-                    const ratingRatio = p.positive_rating / p.total_rating * 5
-                    const brandFilter = brandsFilter.length > 0 ? brandsFilter.includes(p.brands.id) : true
-                    const categoryFilter = categoriesFilter !== 0 ? p.id_categories === categoriesFilter : true
-                    return ratingRatio >= ratingFilter && brandFilter && categoryFilter
-                }).map((p, i) => {
-                    return <Link key={i} to='/product' state={{ id: p.id }} style={{ textDecoration: 'none', color: 'black' }}>
-                        <ProductCard
-                            productName={p.name}
-                            productPrice={p.price}
-                            productBrand={p.brands.name}
-                            productCategory={p.categories.name}
-                            productRating={{ rate: p.positive_rating / p.total_rating * 5, total: p.total_rating }}
-                            productImage={p.image1}
-                        />
-                    </Link>
-                })
-            }
-        </div>
+        <>
+            <div className="product-grid">
+                {loading && <Loading />}
+                {
+                    products?.filter((p) => {
+                        const ratingRatio = p.positive_rating / p.total_rating * 5
+                        const brandFilter = brandsFilter?.length > 0 ? brandsFilter.includes(p.brands.id) : true
+                        const categoryFilter = categoriesFilter !== 0 ? p.id_categories === categoriesFilter : true
+                        return ratingRatio >= ratingFilter && brandFilter && categoryFilter
+                    }).map((p, i) => {
+                        return <Link key={i} to='/product' state={{ id: p.id }} style={{ textDecoration: 'none', color: 'black' }}>
+                            <ProductCard
+                                productName={p.name}
+                                productPrice={p.price}
+                                productBrand={p.brands.name}
+                                productCategory={p.categories.name}
+                                productRating={{ rate: p.positive_rating / p.total_rating * 5, total: p.total_rating }}
+                                productImage={p.image1}
+                            />
+                        </Link>
+                    })
+                }
+            </div>
+        </>
     )
 }
 

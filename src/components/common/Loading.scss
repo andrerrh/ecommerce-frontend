@@ -1,0 +1,23 @@
+.loading-icon {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+    border: solid 15px white;
+    border-top: solid 15px lightskyblue;
+    border-radius: 50%;
+    box-shadow: inset 0 0 2px black, 0 0 2px black;
+    animation: rotateLoading 1s infinite linear;
+}
+
+@keyframes rotateLoading {
+    from {
+        transform: translateX(-50%) rotate(0deg);
+    }
+
+    to {
+        transform: translateX(-50%) rotate(360deg);
+    }  
+}

@@ -135,7 +135,7 @@ export default function Account() {
             }
         })
             .then(res => {
-                showAlert("Usuário atualizado", false, alertsRef)
+                showAlert("Usuário atualizado, atualize a página para ver as mudanças", false, alertsRef)
             }).catch(error => {
                 showAlert("Erro ao atualizar", true, alertsRef)
             })
@@ -179,7 +179,7 @@ export default function Account() {
                         <div ref={firstFragment} className='fragment first-fragment'>
                             <img
                                 className='avatar-img'
-                                src={userInfo.avatar || newImageDisplay || defaultAvatar}
+                                src={newImageDisplay ||userInfo.avatar || defaultAvatar}
                                 alt="default_avatar_image" />
                             <div className="overlay-image"
                                 onClick={changeImageFile}
